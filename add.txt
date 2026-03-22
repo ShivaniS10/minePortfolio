@@ -1,0 +1,67 @@
+link to certificate : https://drive.google.com/file/d/10x0TA23RnZQlKWYJ4nwZJXr3MNvz2rjp/view
+live link to project Interactive Webpage on Electricity Usage : https://electricusage-beta.vercel.app/
+
+AI?ML intership certificate :https://drive.google.com/file/d/16cPkE1kA1bhMJryZD-9RTJi1HyHdzBsm/view
+
+live link to project BloomCare: Smart Healthcare Portal with Chatbot & Reports : https://bloom-bjhrp2ikp-shivani-singhs-projects-0148909b.vercel.app/home
+
+remove Voice-Controlled To-Do Application – Angular + Web Speech API
+remove  TaskFlow – Agile Project & Task Management System
+
+make ui more attractive and modern and proffesion and more high calss animation if possible refactor it and use Reacj.js and tailwind css 
+
+make it responsinve for mobile too 
+
+her cv 
+SKILLS
+Languages:            C++, JavaScript, C, PHP, Java, Python
+Frameworks:          HTML, CSS, NodeJS, ReactJs
+Tools/Platforms:    MySQL, MongoDB, GIT ,GitHub, Ubuntu
+Soft Skills:             Collaboration, Communication, Teamwork, Leadership, Critical Thinking
+
+INTERNSHIP
+AptiDude | Software Developer Intern  
+May 2025 – July 2025
+•	Developed core modules for an aptitude platform supporting 500+ questions and 100+ test cases, improving exam management efficiency.
+•	Engineered backend evaluation logic reducing manual checking effort by ~70% through automated scoring.
+•	Improved system stability by resolving 10+ bugs and optimizing performance during concurrent exam sessions.
+•	Supported deployment and maintenance enabling smooth hosting for 200+ simultaneous users.
+
+PROJECTS
+BloomCare - Smart Healthcare Portal with AI Chatbot & Reports  |  Github
+May 2025 – July 2025
+•	Built a secure healthcare platform managing 1,000+ patient records with encrypted storage, Google Drive API integration, and controlled access mechanisms.
+•	Developed a multi-role ecosystem for patients, doctors, labs, and hospitals with RBAC and JWT-based authentication, ensuring structured authorization flows.
+•	Integrated CURA chatbot resolving 100+ healthcare queries, along with 4 REST APIs enabling dashboards, search filters, and location-based service discovery.
+•	Tech Used: Angular, Node.js, Express.js, MongoDB, REST APIs, Google Drive API, JWT Authentication
+EG-Marketplace - Enterprise Multi-Vendor Marketplace System  |  Github
+May 2025 – July 2025
+•	Created a multi-tenant marketplace supporting Admin, Vendor, and Buyer roles with RBAC and JWT authentication for secure access control.
+•	Designed vendor onboarding, inventory management, and financial workflows handling 100+ products/orders with commission calculation and order lifecycle tracking.
+•	Implemented chatbot assistance and real-time notifications, alongside analytics dashboards with optimized queries, improving engagement by ~40% and operational efficiency.
+•	Tech Used: React.js, Node.js, Express.js, MongoDB, REST APIs, JWT Authentication, RBAC, Event-Driven Architecture, Notification Services, Database Optimization Techniques
+
+CERTIFICATES
+Masters in Generative AI and Generative AI Tools (LLMs, ChatGPT, Modern AI) | Udemy
+ Aug 2025
+ChatGPT Made Easy: AI Essentials for Beginners  | Udemy
+ Aug 2025
+Build Generative AI Apps & Solutions with No-Code Tools | Udemy
+ Aug 2025
+
+EXTRACARICULLAR
+•	Actively participated in 3+ college cultural events and fests, contributing to coordination and ensuring smooth execution with cross-functional teams.
+•	Volunteered in 2+ social initiatives and community activities, strengthening collaboration and organizational responsibility.
+•	Solved 300+ problems on LeetCode, focusing on Data Structures and Algorithms, improving problem-solving speed and coding efficiency.
+•	
+EDUCATION
+Lovely Professional University                                                                                               	Phagwara,Punjab
+Bachelor of Technology - Computer Science and Engineering : CGPA:  6.2	               Since Aug 2023
+	
+Guru Teg Bahadur Public School,India	                                                          	Durgapur,West Bengal
+Intermediate; Percentage : 69 %	                                                                    	April 2022 – March 2023
+	
+Assembly of God Church School Benacity	                                                          	Durgapur,West Bengal
+Matriculation; Percentage : 79 %		April 2020 – March 2021
+
+
