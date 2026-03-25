@@ -19,12 +19,12 @@ const ADMIN_PIN = '271828';
 const DEFAULT_DATA = {
   about: "A passionate and driven B.Tech student specializing in Computer Science and Engineering at LPU. With a solid foundation in C++, Java, and Python, I am dedicated to creating innovative, secure, and efficient solutions at the intersection of web development and AI.",
   extra: [
-    'Solved 300+ problems on LeetCode focusing on DSA.',
+    'Solved 150+ problems on LeetCode focusing on DSA.',
     'Participated in 3+ college cultural events and fests.',
     'Volunteered in 2+ social initiatives and community activities.',
   ],
   education: [
-    { school: 'Lovely Professional University', degree: 'B.Tech - Computer Science and Engineering', duration: 'Since Aug 2023', score: 'CGPA: 6.2' },
+    { school: 'Lovely Professional University', degree: 'B.Tech - Computer Science and Engineering', duration: 'Since Aug 2023', score: 'CGPA: 6.6' },
     { school: 'Guru Teg Bahadur Public School', degree: 'Intermediate', duration: 'Apr 2022 - Mar 2023', score: '69%' },
     { school: 'Assembly of God Church School', degree: 'Matriculation', duration: 'Apr 2020 - Mar 2021', score: '79%' },
   ],
