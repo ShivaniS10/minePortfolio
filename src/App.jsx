@@ -7,14 +7,10 @@ import {
   RotateCcw, Shield, LogOut, BookOpen, Wrench, FileText
 } from 'lucide-react';
 
-/* ─────────────────────────────────────────
-   Admin PIN
-───────────────────────────────────────── */
+/* Admin PIN */
 const ADMIN_PIN = '271828';
 
-/* ─────────────────────────────────────────
-   Default Data (localStorage overrides)
-───────────────────────────────────────── */
+/* Default Data (localStorage overrides) */
 const DEFAULT_DATA = {
   about: "A passionate and driven B.Tech student specializing in Computer Science and Engineering at LPU. With a solid foundation in C++, Java, and Python, I am dedicated to creating innovative, secure, and efficient solutions at the intersection of web development and AI.",
   extra: [
@@ -23,13 +19,13 @@ const DEFAULT_DATA = {
     'Volunteered in 2+ social initiatives and community activities.',
   ],
   education: [
-    { school: 'Lovely Professional University', degree: 'B.Tech – Computer Science & Engineering', duration: 'Since Aug 2023', score: 'CGPA: 6.2' },
-    { school: 'Guru Teg Bahadur Public School', degree: 'Intermediate', duration: 'Apr 2022 – Mar 2023', score: '69%' },
-    { school: 'Assembly of God Church School', degree: 'Matriculation', duration: 'Apr 2020 – Mar 2021', score: '79%' },
+    { school: 'Lovely Professional University', degree: 'B.Tech - Computer Science and Engineering', duration: 'Since Aug 2023', score: 'CGPA: 6.2' },
+    { school: 'Guru Teg Bahadur Public School', degree: 'Intermediate', duration: 'Apr 2022 - Mar 2023', score: '69%' },
+    { school: 'Assembly of God Church School', degree: 'Matriculation', duration: 'Apr 2020 - Mar 2021', score: '79%' },
   ],
   internships: [
     {
-      company: 'AptiDude', role: 'Software Developer Intern', duration: 'May 2025 – Jul 2025',
+      company: 'AptiDude', role: 'Software Developer Intern', duration: 'May 2025 - Jul 2025',
       points: [
         'Developed core modules for an aptitude platform supporting 500+ questions and 100+ test cases.',
         'Engineered backend evaluation logic reducing manual checking effort by ~70% with automated scoring.',
@@ -39,9 +35,9 @@ const DEFAULT_DATA = {
     },
   ],
   projects: [
-    { id: 'p1', title: 'BloomCare – Smart Healthcare Portal', duration: 'May–Jul 2025', tech: 'Angular · Node.js · Express · MongoDB · JWT', points: ['Built a secure healthcare platform managing 1,000+ patient records with encrypted storage.', 'Developed multi-role ecosystem for patients, doctors, labs, hospitals with RBAC.', 'Integrated CURA chatbot resolving 100+ healthcare queries.', 'Enabled location-based service discovery via 4 REST APIs.'], live: 'https://bloom-bjhrp2ikp-shivani-singhs-projects-0148909b.vercel.app/home', github: '' },
-    { id: 'p2', title: 'EG-Marketplace – Multi-Vendor System', duration: 'May–Jul 2025', tech: 'React.js · Node.js · Express · MongoDB · JWT', points: ['Created a multi-tenant marketplace supporting Admin, Vendor, and Buyer roles.', 'Designed vendor onboarding and financial workflows handling 100+ products.', 'Implemented real-time notifications and optimized analytics dashboards.', 'Achieved ~40% improvement in user engagement through performance tuning.'], live: '', github: 'https://github.com/ShivaniS10' },
-    { id: 'p3', title: 'Interactive Webpage – Electricity Usage', duration: 'Apr–May 2024', tech: 'HTML · CSS · JavaScript', points: ['Designed a responsive page focused on sustainability and electricity usage.'], live: 'https://electricusage-beta.vercel.app/', github: '' },
+    { id: 'p1', title: 'BloomCare - Smart Healthcare Portal', duration: 'May-Jul 2025', tech: 'Angular, Node.js, Express, MongoDB, JWT', points: ['Built a secure healthcare platform managing 1,000+ patient records with encrypted storage.', 'Developed multi-role ecosystem for patients, doctors, labs, hospitals with RBAC.', 'Integrated CURA chatbot resolving 100+ healthcare queries.', 'Enabled location-based service discovery via 4 REST APIs.'], live: 'https://bloom-bjhrp2ikp-shivani-singhs-projects-0148909b.vercel.app/home', github: '' },
+    { id: 'p2', title: 'EG-Marketplace - Multi-Vendor System', duration: 'May-Jul 2025', tech: 'React.js, Node.js, Express, MongoDB, JWT', points: ['Created a multi-tenant marketplace supporting Admin, Vendor, and Buyer roles.', 'Designed vendor onboarding and financial workflows handling 100+ products.', 'Implemented real-time notifications and optimized analytics dashboards.', 'Achieved ~40% improvement in user engagement through performance tuning.'], live: '', github: 'https://github.com/ShivaniS10' },
+    { id: 'p3', title: 'Interactive Webpage - Electricity Usage', duration: 'Apr-May 2024', tech: 'HTML, CSS, JavaScript', points: ['Designed a responsive page focused on sustainability and electricity usage.'], live: 'https://electricusage-beta.vercel.app/', github: '' },
   ],
   certificates: [
     { id: 'c1', title: 'Masters in Generative AI and Generative AI Tools', issuer: 'Udemy', date: 'Aug 2025', link: 'https://drive.google.com/file/d/10x0TA23RnZQlKWYJ4nwZJXr3MNvz2rjp/view' },
@@ -51,29 +47,29 @@ const DEFAULT_DATA = {
   ],
   skills: {
     languages: [
-      { name: 'JavaScript', pct: 90, color: '#d97706' },
-      { name: 'C++', pct: 82, color: '#2563eb' },
-      { name: 'Python', pct: 78, color: '#7c3aed' },
-      { name: 'Java', pct: 70, color: '#dc2626' },
-      { name: 'PHP', pct: 58, color: '#4f46e5' },
-      { name: 'C', pct: 65, color: '#0d9488' },
+      { name: 'JavaScript', level: 'Advanced', color: '#d97706' },
+      { name: 'C++', level: 'Advanced', color: '#2563eb' },
+      { name: 'Python', level: 'Moderate', color: '#7c3aed' },
+      { name: 'Java', level: 'Moderate', color: '#dc2626' },
+      { name: 'PHP', level: 'Basic', color: '#4f46e5' },
+      { name: 'C', level: 'Moderate', color: '#0d9488' },
     ],
     frameworks: [
-      { name: 'React.js', pct: 92, color: 'linear-gradient(90deg,#2563eb,#06b6d4)' },
-      { name: 'Node.js', pct: 85, color: 'linear-gradient(90deg,#059669,#16a34a)' },
-      { name: 'Angular', pct: 70, color: 'linear-gradient(90deg,#dc2626,#b91c1c)' },
-      { name: 'Express.js', pct: 83, color: 'linear-gradient(90deg,#4f46e5,#7c3aed)' },
-      { name: 'HTML/CSS', pct: 95, color: 'linear-gradient(90deg,#d97706,#ea580c)' },
+      { name: 'React.js', level: 'Advanced', color: 'linear-gradient(90deg,#2563eb,#06b6d4)' },
+      { name: 'Node.js', level: 'Advanced', color: 'linear-gradient(90deg,#059669,#16a34a)' },
+      { name: 'Angular', level: 'Moderate', color: 'linear-gradient(90deg,#dc2626,#b91c1c)' },
+      { name: 'Express.js', level: 'Moderate', color: 'linear-gradient(90deg,#4f46e5,#7c3aed)' },
+      { name: 'HTML/CSS', level: 'Advanced', color: 'linear-gradient(90deg,#d97706,#ea580c)' },
     ],
     tools: [
-      { name: 'MongoDB', pct: 80, color: 'linear-gradient(90deg,#059669,#0891b2)' },
-      { name: 'MySQL', pct: 72, color: 'linear-gradient(90deg,#0891b2,#2563eb)' },
-      { name: 'Git / GitHub', pct: 88, color: 'linear-gradient(90deg,#7c3aed,#db2777)' },
+      { name: 'MongoDB', level: 'Moderate', color: 'linear-gradient(90deg,#059669,#0891b2)' },
+      { name: 'MySQL', level: 'Moderate', color: 'linear-gradient(90deg,#0891b2,#2563eb)' },
+      { name: 'Git / GitHub', level: 'Advanced', color: 'linear-gradient(90deg,#7c3aed,#db2777)' },
     ],
     soft: ['Collaboration', 'Communication', 'Teamwork', 'Leadership', 'Critical Thinking'],
   },
   name: 'Shivani Singh',
-  title: 'Full Stack Developer & AI Enthusiast',
+  title: 'Full Stack Developer and AI Enthusiast',
 };
 
 function loadData() {
@@ -83,55 +79,42 @@ function loadData() {
   } catch { return DEFAULT_DATA; }
 }
 
-/* ─────────────────────────────────────────
-   Framer variants
-───────────────────────────────────────── */
+/* Framer variants */
 const overlayV = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 0.22 } }, exit: { opacity: 0, transition: { duration: 0.18 } } };
 const boxV = { hidden: { scale: 0.9, opacity: 0, y: 20 }, visible: { scale: 1, opacity: 1, y: 0, transition: { type: 'spring', stiffness: 340, damping: 28 } }, exit: { scale: 0.9, opacity: 0, y: 20, transition: { duration: 0.18 } } };
 const panelV = { hidden: { x: '100%' }, visible: { x: 0, transition: { type: 'spring', stiffness: 320, damping: 32 } }, exit: { x: '100%', transition: { duration: 0.25 } } };
 
-/* ─────────────────────────────────────────
-   Circular Skill Ring
-───────────────────────────────────────── */
-function CircleSkill({ name, pct, color, animate: anim }) {
-  const R = 33, C = 2 * Math.PI * R;
-  const offset = C - (pct / 100) * C;
+/* Skill Badge (Categorical Levels) */
+function SkillBadge({ name, level, color }) {
+  const isGradient = color && color.includes('gradient');
+  const baseColor = isGradient ? '#64748b' : color;
+  const bg = `${baseColor}15`;
+  const border = `${baseColor}35`;
+  const textColor = isGradient ? 'var(--text-primary)' : baseColor;
+
   return (
-    <div className="skill-circle-item">
-      <div className="skill-circle-wrapper" style={{ width: 82, height: 82 }}>
-        <svg width="82" height="82" style={{ transform: 'rotate(-90deg)', position: 'absolute', top: 0, left: 0 }}>
-          <circle cx="41" cy="41" r={R} fill="none" stroke="rgba(100,116,139,0.2)" strokeWidth="6" />
-          <circle cx="41" cy="41" r={R} fill="none" stroke={color} strokeWidth="6" strokeLinecap="round"
-            strokeDasharray={C} strokeDashoffset={anim ? offset : C}
-            style={{ transition: 'stroke-dashoffset 1.3s cubic-bezier(0.4,0,0.2,1)' }}
-          />
-        </svg>
-        <span style={{ position: 'relative', zIndex: 2, fontSize: '0.9rem', fontWeight: 800, color: 'var(--text-primary)' }}>{pct}%</span>
-      </div>
-      <span className="skill-circle-name">{name}</span>
-    </div>
+    <motion.div
+      whileHover={{ y: -3, scale: 1.02 }}
+      className="skill-badge-item"
+      style={{
+        background: bg,
+        border: `1px solid ${border}`,
+        padding: '10px 16px',
+        borderRadius: 14,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 2,
+        minWidth: 110,
+        boxShadow: '0 4px 12px rgba(0,0,0,0.03)'
+      }}
+    >
+      <span style={{ fontSize: '0.92rem', fontWeight: 800, color: textColor }}>{name}</span>
+      <span style={{ fontSize: '0.68rem', fontWeight: 700, textTransform: 'uppercase', opacity: 0.75, letterSpacing: '0.03em' }}>{level}</span>
+    </motion.div>
   );
 }
 
-/* ─────────────────────────────────────────
-   Straight Bar Skill
-───────────────────────────────────────── */
-function BarSkill({ name, pct, color, animate: anim }) {
-  return (
-    <div className="skill-bar-item">
-      <div className="skill-bar-label">
-        <span>{name}</span><span className="skill-bar-pct">{pct}%</span>
-      </div>
-      <div className="skill-bar-track">
-        <div className="skill-bar-fill" style={{ width: anim ? `${pct}%` : '0%', background: color }} />
-      </div>
-    </div>
-  );
-}
-
-/* ─────────────────────────────────────────
-   Modal Wrapper
-───────────────────────────────────────── */
+/* Modal Wrapper */
 function Modal({ isOpen, onClose, title, wide, children }) {
   useEffect(() => {
     const h = (e) => e.key === 'Escape' && onClose();
@@ -157,9 +140,7 @@ function Modal({ isOpen, onClose, title, wide, children }) {
   );
 }
 
-/* ─────────────────────────────────────────
-   OTP Modal
-───────────────────────────────────────── */
+/* OTP Modal */
 function OTPModal({ isOpen, onClose, onSuccess }) {
   const [digits, setDigits] = useState(['', '', '', '', '', '']);
   const [error, setError] = useState('');
@@ -201,7 +182,7 @@ function OTPModal({ isOpen, onClose, onSuccess }) {
             </motion.div>
             {error && <p className="otp-error">{error}</p>}
             <button className="btn-primary" onClick={() => { const pin = digits.join(''); if (pin.length < 6) { setError('Enter all 6 digits.'); return; } verify(pin); }}>
-              Verify & Enter
+              Verify and Enter
             </button>
           </motion.div>
         </motion.div>
@@ -210,20 +191,17 @@ function OTPModal({ isOpen, onClose, onSuccess }) {
   );
 }
 
-/* ─────────────────────────────────────────
-   Admin Panel – Full Content Edit
-   Tabs: Projects | About/Profile | Skills | Education | Certificates
-───────────────────────────────────────── */
+/* Admin Panel - Full Content Edit */
 const TABS = [
-  { id: 'projects',      label: 'Projects',  icon: Briefcase },
-  { id: 'about',         label: 'About',     icon: FileText },
-  { id: 'skills',        label: 'Skills',    icon: Zap },
-  { id: 'education',     label: 'Education', icon: BookOpen },
-  { id: 'certificates',  label: 'Certs',     icon: Award },
+  { id: 'projects', label: 'Projects', icon: Briefcase },
+  { id: 'about', label: 'About', icon: FileText },
+  { id: 'skills', label: 'Skills', icon: Zap },
+  { id: 'education', label: 'Education', icon: BookOpen },
+  { id: 'certificates', label: 'Certs', icon: Award },
 ];
 
 const EMPTY_PROJ = { title: '', duration: '', tech: '', points: '', live: '', github: '' };
-const EMPTY_EDU  = { school: '', degree: '', duration: '', score: '' };
+const EMPTY_EDU = { school: '', degree: '', duration: '', score: '' };
 const EMPTY_CERT = { title: '', issuer: '', date: '', link: '' };
 
 function FInput({ label, value, onChange, placeholder, multi, rows = 3 }) {
@@ -239,13 +217,13 @@ function FInput({ label, value, onChange, placeholder, multi, rows = 3 }) {
 
 function AdminPanel({ isOpen, onClose, data, setData }) {
   const [tab, setTab] = useState('projects');
-  const [proj, setProj]     = useState(EMPTY_PROJ);
+  const [proj, setProj] = useState(EMPTY_PROJ);
   const [editProjId, setEPId] = useState(null);
-  const [edu, setEdu]       = useState(EMPTY_EDU);
-  const [editEduIdx, setEEI]  = useState(null);
-  const [cert, setCert]     = useState(EMPTY_CERT);
-  const [editCertId, setECI]  = useState(null);
-  const [saved, setSaved]   = useState(false);
+  const [edu, setEdu] = useState(EMPTY_EDU);
+  const [editEduIdx, setEEI] = useState(null);
+  const [cert, setCert] = useState(EMPTY_CERT);
+  const [editCertId, setECI] = useState(null);
+  const [saved, setSaved] = useState(false);
 
   const save = (updated) => {
     setData(updated);
@@ -254,7 +232,6 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
     setTimeout(() => setSaved(false), 1800);
   };
 
-  // ── Projects ──
   const addProj = () => {
     if (!proj.title.trim()) return;
     const obj = { id: editProjId || 'p' + Date.now(), title: proj.title.trim(), duration: proj.duration.trim(), tech: proj.tech.trim(), points: proj.points.split('\n').map(p => p.trim()).filter(Boolean), live: proj.live.trim(), github: proj.github.trim() };
@@ -264,7 +241,6 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
   const delProj = (id) => { if (window.confirm('Delete this project?')) save({ ...data, projects: data.projects.filter(p => p.id !== id) }); };
   const editProj = (p) => { setEPId(p.id); setProj({ title: p.title, duration: p.duration, tech: p.tech, points: (p.points || []).join('\n'), live: p.live || '', github: p.github || '' }); };
 
-  // ── Education ──
   const addEdu = () => {
     if (!edu.school.trim()) return;
     const list = [...data.education];
@@ -274,7 +250,6 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
   const delEdu = (i) => { if (window.confirm('Remove this entry?')) { const l = [...data.education]; l.splice(i, 1); save({ ...data, education: l }); } };
   const editEdu = (e, i) => { setEEI(i); setEdu({ ...e }); };
 
-  // ── Certificates ──
   const addCert = () => {
     if (!cert.title.trim()) return;
     const obj = { id: editCertId || 'c' + Date.now(), ...cert };
@@ -284,19 +259,18 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
   const delCert = (id) => { if (window.confirm('Delete?')) save({ ...data, certificates: data.certificates.filter(c => c.id !== id) }); };
   const editCert = (c) => { setECI(c.id); setCert({ title: c.title, issuer: c.issuer, date: c.date, link: c.link || '' }); };
 
-  // ── Skills helpers ──
   const setLang = (i, field, val) => {
-    const langs = data.skills.languages.map((l, idx) => idx === i ? { ...l, [field]: field === 'pct' ? Number(val) : val } : l);
+    const langs = data.skills.languages.map((l, idx) => idx === i ? { ...l, [field]: val } : l);
     save({ ...data, skills: { ...data.skills, languages: langs } });
   };
-  const addLang = () => save({ ...data, skills: { ...data.skills, languages: [...data.skills.languages, { name: 'New Skill', pct: 50, color: '#8b5cf6' }] } });
+  const addLang = () => save({ ...data, skills: { ...data.skills, languages: [...data.skills.languages, { name: 'New Skill', level: 'Basic', color: '#8b5cf6' }] } });
   const delLang = (i) => { const l = [...data.skills.languages]; l.splice(i, 1); save({ ...data, skills: { ...data.skills, languages: l } }); };
 
   const setFw = (i, field, val) => {
-    const fws = data.skills.frameworks.map((f, idx) => idx === i ? { ...f, [field]: field === 'pct' ? Number(val) : val } : f);
+    const fws = data.skills.frameworks.map((f, idx) => idx === i ? { ...f, [field]: val } : f);
     save({ ...data, skills: { ...data.skills, frameworks: fws } });
   };
-  const addFw = () => save({ ...data, skills: { ...data.skills, frameworks: [...data.skills.frameworks, { name: 'New Framework', pct: 60, color: 'linear-gradient(90deg,#2563eb,#7c3aed)' }] } });
+  const addFw = () => save({ ...data, skills: { ...data.skills, frameworks: [...data.skills.frameworks, { name: 'New Framework', level: 'Basic', color: 'linear-gradient(90deg,#2563eb,#7c3aed)' }] } });
   const delFw = (i) => { const f = [...data.skills.frameworks]; f.splice(i, 1); save({ ...data, skills: { ...data.skills, frameworks: f } }); };
 
   const setSoft = (val) => save({ ...data, skills: { ...data.skills, soft: val.split(',').map(s => s.trim()).filter(Boolean) } });
@@ -317,7 +291,6 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
         <>
           <motion.div style={{ position: 'fixed', inset: 0, zIndex: 290, background: 'rgba(0,0,0,0.35)', backdropFilter: 'blur(4px)' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} />
           <motion.div className="admin-panel" variants={panelV} initial="hidden" animate="visible" exit="exit">
-            {/* Header */}
             <div className="admin-header">
               <div className="admin-title">
                 <Shield size={18} style={{ color: 'var(--accent-purple)' }} />
@@ -327,7 +300,6 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
               <button className="btn-icon" onClick={onClose} title="Close"><LogOut size={15} /></button>
             </div>
 
-            {/* Tabs */}
             <div className="admin-tabs">
               {TABS.map(t => (
                 <button key={t.id} className={`admin-tab${tab === t.id ? ' active' : ''}`} onClick={() => setTab(t.id)}>
@@ -337,13 +309,12 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
             </div>
 
             <div className="admin-body">
-              {saved && <p style={{ fontSize: '0.82rem', color: 'var(--accent-green)', fontWeight: 700, textAlign: 'center', background: 'rgba(5,150,105,0.08)', border: '1px solid rgba(5,150,105,0.2)', borderRadius: 10, padding: '7px' }}>✓ Saved!</p>}
+              {saved && <p style={{ fontSize: '0.82rem', color: 'var(--accent-green)', fontWeight: 700, textAlign: 'center', background: 'rgba(5,150,105,0.08)', border: '1px solid rgba(5,150,105,0.2)', borderRadius: 10, padding: '7px' }}>Saved!</p>}
 
-              {/* ══ PROJECTS TAB ══ */}
               {tab === 'projects' && (
                 <>
                   <div>
-                    <div className="admin-section-title">📁 Projects</div>
+                    <div className="admin-section-title">Projects</div>
                     {data.projects.map(p => (
                       <div key={p.id} className="admin-project-row">
                         <span className="admin-project-name">{p.title}</span>
@@ -353,11 +324,11 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
                     ))}
                   </div>
                   <div>
-                    <div className="admin-section-title">{editProjId ? '✏️ Edit' : '➕ Add'} Project</div>
+                    <div className="admin-section-title">{editProjId ? 'Edit' : 'Add'} Project</div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                       <FInput label="Title *" value={proj.title} onChange={v => setProj({ ...proj, title: v })} placeholder="Project name" />
-                      <FInput label="Duration" value={proj.duration} onChange={v => setProj({ ...proj, duration: v })} placeholder="Jan–Mar 2025" />
-                      <FInput label="Tech Stack" value={proj.tech} onChange={v => setProj({ ...proj, tech: v })} placeholder="React · Node.js · MongoDB" />
+                      <FInput label="Duration" value={proj.duration} onChange={v => setProj({ ...proj, duration: v })} placeholder="Jan-Mar 2025" />
+                      <FInput label="Tech Stack" value={proj.tech} onChange={v => setProj({ ...proj, tech: v })} placeholder="React, Node.js, MongoDB" />
                       <FInput label="Key Points (one per line)" value={proj.points} onChange={v => setProj({ ...proj, points: v })} placeholder={"Built X feature\nImproved Y by 30%"} multi />
                       <FInput label="Live Link" value={proj.live} onChange={v => setProj({ ...proj, live: v })} placeholder="https://..." />
                       <FInput label="GitHub Link" value={proj.github} onChange={v => setProj({ ...proj, github: v })} placeholder="https://github.com/..." />
@@ -370,28 +341,27 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
                 </>
               )}
 
-              {/* ══ ABOUT TAB ══ */}
               {tab === 'about' && (
                 <>
                   <div>
-                    <div className="admin-section-title">👤 About / Profile</div>
+                    <div className="admin-section-title">About / Profile</div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                       <FInput label="Display Name" value={data.name} onChange={v => save({ ...data, name: v })} placeholder="Your Name" />
-                      <FInput label="Title / Role" value={data.title} onChange={v => save({ ...data, title: v })} placeholder="Full Stack Developer & AI Enthusiast" />
+                      <FInput label="Title / Role" value={data.title} onChange={v => save({ ...data, title: v })} placeholder="Full Stack Developer and AI Enthusiast" />
                       <FInput label="About Paragraph" value={data.about} onChange={v => save({ ...data, about: v })} placeholder="Write a short bio..." multi rows={5} />
                     </div>
                   </div>
                   <div>
-                    <div className="admin-section-title">⭐ Extra Highlights (one per line)</div>
+                    <div className="admin-section-title">Extra Highlights (one per line)</div>
                     <FInput label="" value={data.extra.join('\n')} onChange={v => save({ ...data, extra: v.split('\n').map(s => s.trim()).filter(Boolean) })} placeholder={"Solved 300+ LeetCode problems\nVolunteered in 2+ events"} multi rows={4} />
                   </div>
                   <div>
-                    <div className="admin-section-title">💼 Internship</div>
+                    <div className="admin-section-title">Internship</div>
                     {data.internships.map((int, i) => (
                       <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                         <FInput label="Role" value={int.role} onChange={v => { const u = [...data.internships]; u[i] = { ...u[i], role: v }; save({ ...data, internships: u }); }} placeholder="Software Developer Intern" />
                         <FInput label="Company" value={int.company} onChange={v => { const u = [...data.internships]; u[i] = { ...u[i], company: v }; save({ ...data, internships: u }); }} placeholder="Company Name" />
-                        <FInput label="Duration" value={int.duration} onChange={v => { const u = [...data.internships]; u[i] = { ...u[i], duration: v }; save({ ...data, internships: u }); }} placeholder="May–Jul 2025" />
+                        <FInput label="Duration" value={int.duration} onChange={v => { const u = [...data.internships]; u[i] = { ...u[i], duration: v }; save({ ...data, internships: u }); }} placeholder="May-Jul 2025" />
                         <FInput label="Key Points (one per line)" value={(int.points || []).join('\n')} onChange={v => { const u = [...data.internships]; u[i] = { ...u[i], points: v.split('\n').map(s => s.trim()).filter(Boolean) }; save({ ...data, internships: u }); }} multi />
                       </div>
                     ))}
@@ -399,50 +369,56 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
                 </>
               )}
 
-              {/* ══ SKILLS TAB ══ */}
               {tab === 'skills' && (
                 <>
                   <div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
-                      <div className="admin-section-title" style={{ marginBottom: 0 }}>🔵 Languages (Circular)</div>
+                      <div className="admin-section-title" style={{ marginBottom: 0 }}>Languages</div>
                       <button className="admin-btn-sm edit" onClick={addLang}>+ Add</button>
                     </div>
                     {data.skills.languages.map((l, i) => (
                       <Row key={i} label={`#${i + 1}`} onDel={() => delLang(i)}>
                         <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
                           <input className="form-input" style={{ fontSize: '0.82rem', flex: '1 1 80px' }} value={l.name} onChange={e => setLang(i, 'name', e.target.value)} placeholder="Name" />
-                          <input className="form-input" style={{ fontSize: '0.82rem', width: 60 }} type="number" min={0} max={100} value={l.pct} onChange={e => setLang(i, 'pct', e.target.value)} placeholder="%" />
-                          <input className="form-input" style={{ fontSize: '0.82rem', width: 70 }} type="color" value={l.color.startsWith('#') ? l.color : '#8b5cf6'} onChange={e => setLang(i, 'color', e.target.value)} />
+                          <select className="form-input" style={{ fontSize: '0.82rem', width: 100 }} value={l.level} onChange={e => setLang(i, 'level', e.target.value)}>
+                            <option value="Basic">Basic</option>
+                            <option value="Moderate">Moderate</option>
+                            <option value="Advanced">Advanced</option>
+                          </select>
+                          <input className="form-input" style={{ fontSize: '0.82rem', width: 70 }} type="color" value={l.color && l.color.startsWith('#') ? l.color : '#8b5cf6'} onChange={e => setLang(i, 'color', e.target.value)} />
                         </div>
                       </Row>
                     ))}
                   </div>
                   <div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
-                      <div className="admin-section-title" style={{ marginBottom: 0 }}>📊 Frameworks / Tools (Bar)</div>
+                      <div className="admin-section-title" style={{ marginBottom: 0 }}>Frameworks / Tools</div>
                       <button className="admin-btn-sm edit" onClick={addFw}>+ Add</button>
                     </div>
                     {data.skills.frameworks.map((f, i) => (
                       <Row key={i} label={`#${i + 1}`} onDel={() => delFw(i)}>
                         <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
                           <input className="form-input" style={{ fontSize: '0.82rem', flex: '1 1 80px' }} value={f.name} onChange={e => setFw(i, 'name', e.target.value)} placeholder="Name" />
-                          <input className="form-input" style={{ fontSize: '0.82rem', width: 60 }} type="number" min={0} max={100} value={f.pct} onChange={e => setFw(i, 'pct', e.target.value)} placeholder="%" />
+                          <select className="form-input" style={{ fontSize: '0.82rem', width: 100 }} value={f.level} onChange={e => setFw(i, 'level', e.target.value)}>
+                            <option value="Basic">Basic</option>
+                            <option value="Moderate">Moderate</option>
+                            <option value="Advanced">Advanced</option>
+                          </select>
                         </div>
                       </Row>
                     ))}
                   </div>
                   <div>
-                    <div className="admin-section-title">🤝 Soft Skills (comma-separated)</div>
+                    <div className="admin-section-title">Soft Skills (comma-separated)</div>
                     <FInput label="" value={data.skills.soft.join(', ')} onChange={setSoft} placeholder="Teamwork, Leadership, Communication" />
                   </div>
                 </>
               )}
 
-              {/* ══ EDUCATION TAB ══ */}
               {tab === 'education' && (
                 <>
                   <div>
-                    <div className="admin-section-title">🎓 Education Entries</div>
+                    <div className="admin-section-title">Education Entries</div>
                     {data.education.map((e, i) => (
                       <div key={i} className="admin-project-row">
                         <span className="admin-project-name">{e.school}</span>
@@ -452,10 +428,10 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
                     ))}
                   </div>
                   <div>
-                    <div className="admin-section-title">{editEduIdx !== null ? '✏️ Edit' : '➕ Add'} Entry</div>
+                    <div className="admin-section-title">{editEduIdx !== null ? 'Edit' : 'Add'} Entry</div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                       <FInput label="School / University *" value={edu.school} onChange={v => setEdu({ ...edu, school: v })} placeholder="LPU" />
-                      <FInput label="Degree" value={edu.degree} onChange={v => setEdu({ ...edu, degree: v })} placeholder="B.Tech – CSE" />
+                      <FInput label="Degree" value={edu.degree} onChange={v => setEdu({ ...edu, degree: v })} placeholder="B.Tech - CSE" />
                       <FInput label="Duration" value={edu.duration} onChange={v => setEdu({ ...edu, duration: v })} placeholder="Since Aug 2023" />
                       <FInput label="Score / CGPA" value={edu.score} onChange={v => setEdu({ ...edu, score: v })} placeholder="CGPA: 8.5 or 90%" />
                       <div style={{ display: 'flex', gap: 8 }}>
@@ -467,11 +443,10 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
                 </>
               )}
 
-              {/* ══ CERTIFICATES TAB ══ */}
               {tab === 'certificates' && (
                 <>
                   <div>
-                    <div className="admin-section-title">🏆 Certificates</div>
+                    <div className="admin-section-title">Certificates</div>
                     {data.certificates.map(c => (
                       <div key={c.id} className="admin-project-row">
                         <span className="admin-project-name">{c.title}</span>
@@ -481,7 +456,7 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
                     ))}
                   </div>
                   <div>
-                    <div className="admin-section-title">{editCertId ? '✏️ Edit' : '➕ Add'} Certificate</div>
+                    <div className="admin-section-title">{editCertId ? 'Edit' : 'Add'} Certificate</div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                       <FInput label="Title *" value={cert.title} onChange={v => setCert({ ...cert, title: v })} placeholder="Certificate name" />
                       <FInput label="Issuer" value={cert.issuer} onChange={v => setCert({ ...cert, issuer: v })} placeholder="Udemy / Coursera" />
@@ -503,17 +478,15 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
   );
 }
 
-/* ─────────────────────────────────────────
-   Main App
-───────────────────────────────────────── */
+/* Main App */
 export default function App() {
-  const [data, setData]           = useState(loadData);
-  const [activeModal, setModal]   = useState(null);
-  const [dateTime, setDT]         = useState(new Date());
-  const [darkMode, setDark]       = useState(() => localStorage.getItem('darkMode') === 'true');
-  const [skillsAnim, setSkAnim]   = useState(false);
-  const [otpOpen, setOtp]         = useState(false);
-  const [adminOpen, setAdmin]     = useState(false);
+  const [data, setData] = useState(loadData);
+  const [activeModal, setModal] = useState(null);
+  const [dateTime, setDT] = useState(new Date());
+  const [darkMode, setDark] = useState(() => localStorage.getItem('darkMode') === 'true');
+  const [skillsAnim, setSkAnim] = useState(false);
+  const [otpOpen, setOtp] = useState(false);
+  const [adminOpen, setAdmin] = useState(false);
 
   const clickCount = useRef(0);
   const clickTimer = useRef(null);
@@ -550,20 +523,19 @@ export default function App() {
   const close = () => setModal(null);
 
   const NAV = [
-    { id: 'about',     icon: User,          label: 'Summary',  color: '#2563eb' },
-    { id: 'skills',    icon: Zap,           label: 'Skills',   color: '#7c3aed' },
-    { id: 'projects',  icon: Briefcase,     label: 'Projects', color: '#059669' },
+    { id: 'about', icon: User, label: 'Summary', color: '#2563eb' },
+    { id: 'skills', icon: Zap, label: 'Skills', color: '#7c3aed' },
+    { id: 'projects', icon: Briefcase, label: 'Projects', color: '#059669' },
     { id: 'education', icon: GraduationCap, label: 'Academic', color: '#d97706' },
-    { id: 'contact',   icon: Mail,          label: 'Contact',  color: '#0891b2' },
-    { id: 'socials',   icon: Share2,        label: 'Socials',  color: '#db2777' },
+    { id: 'contact', icon: Mail, label: 'Contact', color: '#0891b2' },
+    { id: 'socials', icon: Share2, label: 'Socials', color: '#db2777' },
   ];
 
   return (
     <div className="dashboard-wrap">
       <div className="dashboard-container">
-        {/* Top Bar */}
         <div className="top-bar">
-          <p className="greeting-text">{greeting()},&nbsp;{fmtDate(dateTime)}</p>
+          <p className="greeting-text">{greeting()}, {fmtDate(dateTime)}</p>
           <div className="status-bar">
             <button className="btn-icon" onClick={() => setDark(!darkMode)} aria-label="Toggle dark mode">
               {darkMode
@@ -574,10 +546,8 @@ export default function App() {
           </div>
         </div>
 
-        {/* Main */}
         <div className="main-content">
           <div className="center-hub">
-            {/* Avatar */}
             <div className="avatar-wrap">
               <div className="avatar-ring">
                 <div className="avatar-ring-inner">
@@ -586,7 +556,6 @@ export default function App() {
               </div>
             </div>
 
-            {/* Hero Text */}
             <div className="hero-text">
               <h1>Hello, {data.name.split(' ')[0]}</h1>
               <p className="hero-title">{data.title}</p>
@@ -596,7 +565,6 @@ export default function App() {
               </span>
             </div>
 
-            {/* Floating icons */}
             <div className="icons-container">
               {NAV.map((item, i) => {
                 const Icon = item.icon;
@@ -618,13 +586,11 @@ export default function App() {
           </div>
         </div>
 
-        {/* Footer – triple click = admin */}
         <div className="hero-trailer" onClick={handleFooterClick}>
-          React · Vite · Framer Motion
+          React, Vite, Framer Motion
         </div>
       </div>
 
-      {/* ── About ── */}
       <Modal isOpen={activeModal === 'about'} onClose={close} title="Summary">
         <p className="modal-body-text" style={{ marginBottom: 24 }}>{data.about}</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(230px,1fr))', gap: 12 }}>
@@ -637,21 +603,20 @@ export default function App() {
         </div>
       </Modal>
 
-      {/* ── Skills ── */}
       <Modal isOpen={activeModal === 'skills'} onClose={close} title="Technical Skills" wide>
         <div className="section-label"><Zap size={13} style={{ color: 'var(--accent-orange)' }} />Core Languages</div>
-        <div className="skills-circles-grid">
-          {data.skills.languages.map(s => <CircleSkill key={s.name} {...s} animate={skillsAnim} />)}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 28 }}>
+          {data.skills.languages.map(s => <SkillBadge key={s.name} {...s} />)}
         </div>
 
-        <div className="section-label" style={{ marginTop: 6 }}><Code size={13} style={{ color: 'var(--accent-blue)' }} />Frameworks & Libraries</div>
-        <div className="skill-bar-list" style={{ marginBottom: 26 }}>
-          {data.skills.frameworks.map(s => <BarSkill key={s.name} {...s} animate={skillsAnim} />)}
+        <div className="section-label" style={{ marginTop: 6 }}><Code size={13} style={{ color: 'var(--accent-blue)' }} />Frameworks and Libraries</div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 28 }}>
+          {data.skills.frameworks.map(s => <SkillBadge key={s.name} {...s} />)}
         </div>
 
-        <div className="section-label"><Wrench size={13} style={{ color: 'var(--accent-teal)' }} />Tools & Databases</div>
-        <div className="skill-bar-list" style={{ marginBottom: 26 }}>
-          {data.skills.tools.map(s => <BarSkill key={s.name} {...s} animate={skillsAnim} />)}
+        <div className="section-label"><Wrench size={13} style={{ color: 'var(--accent-teal)' }} />Tools and Databases</div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 28 }}>
+          {data.skills.tools.map(s => <SkillBadge key={s.name} {...s} />)}
         </div>
 
         <div className="section-label"><User size={13} style={{ color: 'var(--accent-pink)' }} />Soft Skills</div>
@@ -662,8 +627,7 @@ export default function App() {
         </div>
       </Modal>
 
-      {/* ── Projects ── */}
-      <Modal isOpen={activeModal === 'projects'} onClose={close} title="Experience & Projects" wide>
+      <Modal isOpen={activeModal === 'projects'} onClose={close} title="Experience and Projects" wide>
         <div className="section-label"><Zap size={13} style={{ color: 'var(--accent-orange)' }} />Internship</div>
         {data.internships.map((int, i) => (
           <div key={i} className="internship-card" style={{ marginBottom: 24 }}>
@@ -709,8 +673,7 @@ export default function App() {
         </div>
       </Modal>
 
-      {/* ── Education ── */}
-      <Modal isOpen={activeModal === 'education'} onClose={close} title="Academic & Growth">
+      <Modal isOpen={activeModal === 'education'} onClose={close} title="Academic and Growth">
         <div className="section-label"><GraduationCap size={13} style={{ color: 'var(--accent-orange)' }} />Education</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 4, marginBottom: 28 }}>
           {data.education.map((edu, i) => (
@@ -721,7 +684,7 @@ export default function App() {
                 <div className="edu-degree">{edu.degree}</div>
                 <div className="edu-meta">
                   <span className="edu-score">{edu.score}</span>
-                  <span style={{ color: 'var(--text-muted)' }}>·</span>
+                  <span style={{ color: 'var(--text-muted)' }}>.</span>
                   <span className="edu-dur">{edu.duration}</span>
                 </div>
               </div>
@@ -735,7 +698,7 @@ export default function App() {
             <div key={cert.id || i} className="cert-card">
               <div className="cert-title">{cert.title}</div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span className="cert-meta">{cert.issuer} · {cert.date}</span>
+                <span className="cert-meta">{cert.issuer} . {cert.date}</span>
                 {cert.link && <a href={cert.link} target="_blank" rel="noreferrer" style={{ color: 'var(--accent-blue)', padding: '3px 5px', borderRadius: 7, transition: 'all 0.2s' }}><ExternalLink size={13} /></a>}
               </div>
             </div>
@@ -743,7 +706,6 @@ export default function App() {
         </div>
       </Modal>
 
-      {/* ── Contact ── */}
       <Modal isOpen={activeModal === 'contact'} onClose={close} title="Connect">
         <p style={{ color: 'var(--text-secondary)', fontWeight: 500, textAlign: 'center', marginBottom: 24, fontSize: '1rem' }}>
           Send me a message for collaborations or opportunities.
@@ -751,22 +713,21 @@ export default function App() {
         <form style={{ display: 'flex', flexDirection: 'column', gap: 13 }} onSubmit={(e) => {
           e.preventDefault();
           const btn = e.target.querySelector('button[type="submit"]');
-          btn.textContent = 'Sending…'; btn.disabled = true;
+          btn.textContent = 'Sending...'; btn.disabled = true;
           const params = { name: e.target.name.value, email: e.target.email.value, mobile: e.target.mobile.value, message: e.target.message.value };
           window.emailjs?.send('service_mqmau3b', 'template_6mlxs0g', params)
-            .then(() => { alert("Sent! I'll get back to you soon."); e.target.reset(); close(); })
+            .then(() => { alert("Sent! I will get back to you soon."); e.target.reset(); close(); })
             .catch(err => alert('Error: ' + err.text))
             .finally(() => { btn.textContent = 'Send Message'; btn.disabled = false; });
         }}>
           <input name="name" type="text" placeholder="Your Name" required className="form-input" />
           <input name="email" type="email" placeholder="Email Address" required className="form-input" />
           <input name="mobile" type="text" placeholder="Mobile Number" required className="form-input" />
-          <textarea name="message" placeholder="Your Message…" rows={4} required className="form-input" style={{ resize: 'vertical' }} />
+          <textarea name="message" placeholder="Your Message..." rows={4} required className="form-input" style={{ resize: 'vertical' }} />
           <button type="submit" className="btn-primary">Send Message</button>
         </form>
       </Modal>
 
-      {/* ── Socials ── */}
       <Modal isOpen={activeModal === 'socials'} onClose={close} title="Social Portals">
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 28, padding: '16px 0' }}>
           <div style={{ display: 'flex', gap: 22, flexWrap: 'wrap', justifyContent: 'center' }}>
@@ -785,10 +746,8 @@ export default function App() {
         </div>
       </Modal>
 
-      {/* ── OTP ── */}
       <OTPModal isOpen={otpOpen} onClose={() => setOtp(false)} onSuccess={() => { setOtp(false); setAdmin(true); }} />
 
-      {/* ── Admin ── */}
       <AdminPanel isOpen={adminOpen} onClose={() => setAdmin(false)} data={data} setData={setData} />
     </div>
   );
