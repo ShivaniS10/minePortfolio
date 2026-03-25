@@ -4,13 +4,18 @@ import {
   User, Code, Briefcase, GraduationCap, Mail, Share2,
   ExternalLink, Github, Linkedin, X, ChevronRight,
   Award, Zap, Moon, Sun, Trash2, Edit3,
-  RotateCcw, Shield, LogOut, BookOpen, Wrench, FileText
+  RotateCcw, Shield, LogOut, BookOpen, Wrench, FileText,
+  Trophy
 } from 'lucide-react';
 
-/* Admin PIN */
+/* ─────────────────────────────────────────
+   Admin PIN
+───────────────────────────────────────── */
 const ADMIN_PIN = '271828';
 
-/* Default Data (localStorage overrides) */
+/* ─────────────────────────────────────────
+   Default Data (localStorage overrides)
+───────────────────────────────────────── */
 const DEFAULT_DATA = {
   about: "A passionate and driven B.Tech student specializing in Computer Science and Engineering at LPU. With a solid foundation in C++, Java, and Python, I am dedicated to creating innovative, secure, and efficient solutions at the intersection of web development and AI.",
   extra: [
@@ -44,6 +49,11 @@ const DEFAULT_DATA = {
     { id: 'c2', title: 'ChatGPT Made Easy: AI Essentials', issuer: 'Udemy', date: 'Aug 2025', link: '' },
     { id: 'c3', title: 'Build Generative AI Apps (No-Code)', issuer: 'Udemy', date: 'Aug 2025', link: '' },
     { id: 'c4', title: 'AI/ML Internship Certificate', issuer: 'InternPe', date: 'Jun 2024', link: 'https://drive.google.com/file/d/16cPkE1kA1bhMJryZD-9RTJi1HyHdzBsm/view' },
+  ],
+  achievements: [
+    'Secured top ranks in internal college coding competitions.',
+    'Consistently maintained a high problem-solving streak on LeetCode.',
+    'Successfully deployed multiple full-stack applications to production.'
   ],
   skills: {
     languages: [
@@ -79,12 +89,16 @@ function loadData() {
   } catch { return DEFAULT_DATA; }
 }
 
-/* Framer variants */
+/* ─────────────────────────────────────────
+   Framer variants
+───────────────────────────────────────── */
 const overlayV = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 0.22 } }, exit: { opacity: 0, transition: { duration: 0.18 } } };
 const boxV = { hidden: { scale: 0.9, opacity: 0, y: 20 }, visible: { scale: 1, opacity: 1, y: 0, transition: { type: 'spring', stiffness: 340, damping: 28 } }, exit: { scale: 0.9, opacity: 0, y: 20, transition: { duration: 0.18 } } };
 const panelV = { hidden: { x: '100%' }, visible: { x: 0, transition: { type: 'spring', stiffness: 320, damping: 32 } }, exit: { x: '100%', transition: { duration: 0.25 } } };
 
-/* Skill Badge (Categorical Levels) */
+/* ─────────────────────────────────────────
+   Skill Badge (Categorical Levels)
+───────────────────────────────────────── */
 function SkillBadge({ name, level, color }) {
   const isGradient = color && color.includes('gradient');
   const baseColor = isGradient ? '#64748b' : color;
@@ -114,7 +128,9 @@ function SkillBadge({ name, level, color }) {
   );
 }
 
-/* Modal Wrapper */
+/* ─────────────────────────────────────────
+   Modal Wrapper
+───────────────────────────────────────── */
 function Modal({ isOpen, onClose, title, wide, children }) {
   useEffect(() => {
     const h = (e) => e.key === 'Escape' && onClose();
@@ -140,7 +156,9 @@ function Modal({ isOpen, onClose, title, wide, children }) {
   );
 }
 
-/* OTP Modal */
+/* ─────────────────────────────────────────
+   OTP Modal
+───────────────────────────────────────── */
 function OTPModal({ isOpen, onClose, onSuccess }) {
   const [digits, setDigits] = useState(['', '', '', '', '', '']);
   const [error, setError] = useState('');
@@ -191,13 +209,16 @@ function OTPModal({ isOpen, onClose, onSuccess }) {
   );
 }
 
-/* Admin Panel - Full Content Edit */
+/* ─────────────────────────────────────────
+   Admin Panel - Full Content Edit
+───────────────────────────────────────── */
 const TABS = [
   { id: 'projects', label: 'Projects', icon: Briefcase },
   { id: 'about', label: 'About', icon: FileText },
   { id: 'skills', label: 'Skills', icon: Zap },
   { id: 'education', label: 'Education', icon: BookOpen },
   { id: 'certificates', label: 'Certs', icon: Award },
+  { id: 'achievements', label: 'Achievements', icon: Trophy },
 ];
 
 const EMPTY_PROJ = { title: '', duration: '', tech: '', points: '', live: '', github: '' };
@@ -470,6 +491,15 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
                   </div>
                 </>
               )}
+
+              {/* 🏆 ACHIEVEMENTS TAB RENDER 🏆 */}
+              {tab === 'achievements' && (
+                <div>
+                  <div className="admin-section-title">🌟 Achievements (one per line)</div>
+                  <FInput label="" value={(data.achievements || []).join('\n')} onChange={v => save({ ...data, achievements: v.split('\n').map(s => s.trim()).filter(Boolean) })} placeholder={"Hackathon Winner\nPublished Paper"} multi rows={6} />
+                </div>
+              )}
+
             </div>
           </motion.div>
         </>
@@ -478,13 +508,14 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
   );
 }
 
-/* Main App */
+/* ─────────────────────────────────────────
+   Main App
+───────────────────────────────────────── */
 export default function App() {
   const [data, setData] = useState(loadData);
   const [activeModal, setModal] = useState(null);
   const [dateTime, setDT] = useState(new Date());
   const [darkMode, setDark] = useState(() => localStorage.getItem('darkMode') === 'true');
-  const [skillsAnim, setSkAnim] = useState(false);
   const [otpOpen, setOtp] = useState(false);
   const [adminOpen, setAdmin] = useState(false);
 
@@ -509,14 +540,6 @@ export default function App() {
     return () => clearInterval(t);
   }, []);
 
-  useEffect(() => {
-    if (activeModal === 'skills') {
-      setSkAnim(false);
-      const t = setTimeout(() => setSkAnim(true), 120);
-      return () => clearTimeout(t);
-    }
-  }, [activeModal]);
-
   const fmtTime = (d) => d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
   const fmtDate = (d) => d.toLocaleDateString('en-US', { day: 'numeric', month: 'short' });
   const greeting = () => { const h = dateTime.getHours(); return h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening'; };
@@ -526,6 +549,7 @@ export default function App() {
     { id: 'about', icon: User, label: 'Summary', color: '#2563eb' },
     { id: 'skills', icon: Zap, label: 'Skills', color: '#7c3aed' },
     { id: 'projects', icon: Briefcase, label: 'Projects', color: '#059669' },
+    { id: 'achievements', icon: Trophy, label: 'Achievements', color: '#14b8a6' },
     { id: 'education', icon: GraduationCap, label: 'Academic', color: '#d97706' },
     { id: 'contact', icon: Mail, label: 'Contact', color: '#0891b2' },
     { id: 'socials', icon: Share2, label: 'Socials', color: '#db2777' },
@@ -704,6 +728,22 @@ export default function App() {
             </div>
           ))}
         </div>
+      </Modal>
+
+      {/* 🏆 NEW ACHIEVEMENTS MODAL 🏆 */}
+      <Modal isOpen={activeModal === 'achievements'} onClose={close} title="Key Achievements">
+        {(data.achievements && data.achievements.length > 0) ? (
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(230px,1fr))', gap: 12 }}>
+            {data.achievements.map((item, i) => (
+              <div key={i} className="extra-item" style={{ background: 'rgba(20, 184, 166, 0.08)', borderColor: 'rgba(20, 184, 166, 0.22)' }}>
+                <Trophy size={17} style={{ color: '#14b8a6', flexShrink: 0, marginTop: 1 }} />
+                <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 600 }}>{item}</span>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p style={{ textAlign: 'center', color: 'var(--text-muted)' }}>No achievements added yet.</p>
+        )}
       </Modal>
 
       <Modal isOpen={activeModal === 'contact'} onClose={close} title="Connect">
