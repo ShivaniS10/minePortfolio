@@ -606,6 +606,20 @@ export default function App() {
         <div className="main-content">
           <div className="center-hub">
             <div className="avatar-wrap">
+              <motion.a
+                href="/resume/resume.pdf"
+                download="Shivani_Singh_Resume.pdf"
+                className="icon-item icon-resume"
+                whileHover={{ scale: 1.1, y: -5 }}
+                whileTap={{ scale: 0.94 }}
+                transition={{ type: 'spring', stiffness: 340, damping: 18 }}
+                title="Download Resume"
+              >
+                <div className="icon-circle">
+                  <FileText size={25} style={{ color: 'var(--accent-blue)' }} />
+                </div>
+                <span className="icon-label">Resume</span>
+              </motion.a>
               <div className="avatar-ring">
                 <div className="avatar-ring-inner">
                   <img src="/assets/img/shivani.png" alt={data.name} />
