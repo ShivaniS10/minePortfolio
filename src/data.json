@@ -1,0 +1,59 @@
+{
+  "personal": {
+    "name": "Shivani Singh",
+    "title": "Full Stack Developer and AI Enthusiast",
+    "location": "LPU (Lovely Professional University)",
+    "about": "A passionate and driven B.Tech student specializing in Computer Science and Engineering at LPU. With a solid foundation in C++, Java, and Python, I am dedicated to creating innovative, secure, and efficient solutions at the intersection of web development and AI."
+  },
+  "skills": {
+    "languages": ["JavaScript", "C++", "Python", "Java", "PHP", "C"],
+    "frameworks": ["React.js", "Node.js", "Angular", "Express.js", "HTML/CSS"],
+    "tools": ["MongoDB", "MySQL", "Git / GitHub"],
+    "soft": ["Collaboration", "Communication", "Teamwork", "Leadership", "Critical Thinking"]
+  },
+  "experience": [
+    {
+      "role": "Software Developer Intern",
+      "company": "AptiDude",
+      "duration": "May 2025 - Jul 2025",
+      "description": "Developed core modules for an aptitude platform supporting 500+ questions and 100+ test cases. Engineered backend evaluation logic reducing manual checking effort by ~70% with automated scoring."
+    }
+  ],
+  "projects": [
+    {
+      "title": "BloomCare - Smart Healthcare Portal",
+      "tech": "Angular, Node.js, Express, MongoDB, JWT",
+      "description": "Built a secure healthcare platform managing 1,000+ patient records with encrypted storage. Developed multi-role ecosystem for patients, doctors, labs, hospitals with RBAC. Integrated CURA chatbot resolving 100+ healthcare queries. Enabled location-based service discovery via 4 REST APIs.",
+      "live": "https://bloom-bjhrp2ikp-shivani-singhs-projects-0148909b.vercel.app/home",
+      "github": ""
+    },
+    {
+      "title": "EG-Marketplace - Multi-Vendor System",
+      "tech": "React.js, Node.js, Express, MongoDB, JWT",
+      "description": "Created a multi-tenant marketplace supporting Admin, Vendor, and Buyer roles. Designed vendor onboarding and financial workflows handling 100+ products. Implemented real-time notifications and optimized analytics dashboards. Achieved ~40% improvement in user engagement through performance tuning.",
+      "live": "",
+      "github": "https://github.com/ShivaniS10"
+    },
+    {
+      "title": "Interactive Webpage - Electricity Usage",
+      "tech": "HTML, CSS, JavaScript",
+      "description": "Designed a responsive page focused on sustainability and electricity usage. Focused on visual data representation and user engagement for energy conservation.",
+      "live": "https://electricusage-beta.vercel.app/",
+      "github": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What are your core strengths?",
+      "answer": "My core strengths lie in full-stack web development, particularly with React and Node.js, and I have a strong foundation in Data Structures and Algorithms with over 150+ problems solved on LeetCode."
+    },
+    {
+      "question": "Are you open to internships?",
+      "answer": "Yes, I am always looking for exciting opportunities to learn and grow in the field of software development and AI."
+    },
+    {
+      "question": "How can I contact you?",
+      "answer": "You can reach out to me via the 'Contact' section in the portfolio or connect with me on LinkedIn."
+    }
+  ]
+}

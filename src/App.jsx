@@ -7,6 +7,7 @@ import {
   RotateCcw, Shield, LogOut, BookOpen, Wrench, FileText,
   Trophy
 } from 'lucide-react';
+import ChatBot from './components/ChatBot';
 
 /* ─────────────────────────────────────────
    Admin PIN
@@ -747,9 +748,27 @@ export default function App() {
       </Modal>
 
       <Modal isOpen={activeModal === 'contact'} onClose={close} title="Connect">
-        <p style={{ color: 'var(--text-secondary)', fontWeight: 500, textAlign: 'center', marginBottom: 24, fontSize: '1rem' }}>
+        <p style={{ color: 'var(--text-secondary)', fontWeight: 500, textAlign: 'center', marginBottom: 12, fontSize: '1rem' }}>
           Send me a message for collaborations or opportunities.
         </p>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
+          <a href="mailto:your-email@example.com" style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            gap: 8, 
+            padding: '10px 18px', 
+            borderRadius: 12, 
+            background: 'rgba(124, 58, 237, 0.08)', 
+            border: '1px solid rgba(124, 58, 237, 0.22)',
+            color: 'var(--accent-purple)',
+            fontSize: '0.9rem',
+            fontWeight: 700,
+            textDecoration: 'none'
+          }}>
+            <Mail size={18} />
+            your-email@example.com
+          </a>
+        </div>
         <form style={{ display: 'flex', flexDirection: 'column', gap: 13 }} onSubmit={(e) => {
           e.preventDefault();
           const btn = e.target.querySelector('button[type="submit"]');
@@ -789,6 +808,8 @@ export default function App() {
       <OTPModal isOpen={otpOpen} onClose={() => setOtp(false)} onSuccess={() => { setOtp(false); setAdmin(true); }} />
 
       <AdminPanel isOpen={adminOpen} onClose={() => setAdmin(false)} data={data} setData={setData} />
+      
+      <ChatBot />
     </div>
   );
 }
