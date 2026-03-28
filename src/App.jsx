@@ -10,9 +10,9 @@ import {
 import ChatBot from './components/ChatBot';
 
 /* ─────────────────────────────────────────
-   Admin PIN
+   Admin Security (Environment Variables)
 ───────────────────────────────────────── */
-const ADMIN_PIN = '271828';
+const ADMIN_PIN = import.meta.env.VITE_ADMIN_PASSWORD || '271828';
 
 /* ─────────────────────────────────────────
    Default Data (localStorage overrides)
@@ -220,6 +220,7 @@ const TABS = [
   { id: 'education', label: 'Education', icon: BookOpen },
   { id: 'certificates', label: 'Certs', icon: Award },
   { id: 'achievements', label: 'Achievements', icon: Trophy },
+  { id: 'system', label: 'System', icon: Shield },
 ];
 
 const EMPTY_PROJ = { title: '', duration: '', tech: '', points: '', live: '', github: '' };
@@ -501,6 +502,29 @@ function AdminPanel({ isOpen, onClose, data, setData }) {
                 </div>
               )}
 
+              {/* 📊 SYSTEM STATS TAB 📊 */}
+              {tab === 'system' && (
+                <div>
+                  <div className="admin-section-title">🖥️ System Information</div>
+                  <div style={{ background: 'rgba(255,255,255,0.2)', border: '1px solid var(--glass-border)', borderRadius: 12, padding: '16px', marginBottom: 20 }}>
+                     <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: 8 }}>
+                       Last View Detected:
+                     </div>
+                     <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--accent-purple)' }}>
+                       {localStorage.getItem('last_site_view') || "Never"}
+                     </div>
+                     <p style={{ fontSize: '0.75rem', marginTop: 12, color: 'var(--text-muted)', fontStyle: 'italic' }}>
+                       * This tracks the last time the site was opened on this device. For global tracking across all users, connect to Vercel KV or a shared database.
+                     </p>
+                  </div>
+                  
+                  <div className="admin-section-title">Deployment</div>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                    Hosting Provider: <span style={{ fontWeight: 700, color: 'var(--accent-blue)' }}>Vercel</span>
+                  </p>
+                </div>
+              )}
+
             </div>
           </motion.div>
         </>
@@ -538,6 +562,14 @@ export default function App() {
 
   useEffect(() => {
     const t = setInterval(() => setDT(new Date()), 1000);
+    
+    // Visit Tracking (Last Viewed)
+    const now = new Date().toLocaleString();
+    if (!sessionStorage.getItem('session_tracked')) {
+        localStorage.setItem('last_site_view', now);
+        sessionStorage.setItem('session_tracked', 'true');
+    }
+    
     return () => clearInterval(t);
   }, []);
 
