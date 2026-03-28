@@ -261,8 +261,9 @@ body::before {
 .icon-resume {
   --icon-grad: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
   --icon-glow: rgba(37, 99, 235, 0.4);
-  bottom: -69%;
-  left: -113%;
+  top: 81%;
+  /* Positioned between Skills and Projects on the ring */
+  left: -35%;
   transform: translateY(-50%);
   pointer-events: auto;
   text-decoration: none;
@@ -1338,7 +1339,11 @@ body::before {
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
+    transform: none !important;
+    /* CRITICAL: Resets desktop centering for mobile */
     width: 86px;
+    margin: 10px 0;
+    /* Add vertical breathing room */
   }
 
   .modal-box {
