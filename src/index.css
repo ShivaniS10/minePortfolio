@@ -261,7 +261,7 @@ body::before {
 .icon-resume {
   --icon-grad: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
   --icon-glow: rgba(37, 99, 235, 0.4);
-  top: 81%;
+  top: 90%;
   /* Positioned between Skills and Projects on the ring */
   left: -35%;
   transform: translateY(-50%);
